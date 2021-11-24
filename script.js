@@ -1,3 +1,16 @@
+class Ball {
+  constructor(x, y, w, h, vx, vy) {
+    this.x = x;
+    this.y = y;
+    this.width = w;
+    this.height = h;
+    this.vx = vx;
+    this.vy = vy;
+}
+
+
+
+
 var x, y, vx, vy
 var x2, y2, vx2, vy2
 
