@@ -30,7 +30,7 @@ var x2, y2, vx2, vy2
 function setup() {
   createCanvas(500, 400);
   
-  vx = 5;
+  vx = 100;
   vy = 5;
   y = 200;
   x = 30;
@@ -39,35 +39,22 @@ function setup() {
   y2 = 20;
   x2 = 30;
 }
+var ball1, ball2, ball3;
 
+function setup() {
+	createCanvas(500, 400);
 
+  ball1 = new Ball(300,200,50,50,5,5);
+  ball2 = new Ball(200,100,50,50,10,7);
+  ball3 = new Ball(200,150,50,50,1,-1);
+}
 
 function draw() {
-  background(225);
-
-  ellipse(x,y,50,50)
-  fill('red')
+	background(225);  
   
-  circle(x2,y2,25);
-  
-  x = x + vx;
-  y = y + vy;
-  
-  if(x < 0 || x > 500){
-    vx = vx * -1;
-  }
-
-  if(y < 0 || y > 400){
-    vy = vy * -1;
-  }
-  x2 = x2 + vx2;
-  y2 = y2 + vy2;
-  
-  if(x2 < 0 || x2 > 500){
-    vx2 = vx2 * -1;
-  }
-
-  if(y2 < 0 || y2 > 400){
-    vy2 = vy2 * -1;
-  }
+  ball1.draw();
+  ball2.draw();
+  ball3.draw();
 }
+
+
